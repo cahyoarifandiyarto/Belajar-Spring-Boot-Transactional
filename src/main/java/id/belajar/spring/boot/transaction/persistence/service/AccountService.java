@@ -22,15 +22,6 @@ public class AccountService {
         return Boolean.TRUE;
     }
 
-    public Account findById(String id) {
-        Optional<Account> account = accountRepository.findById(id);
-        if (account.isEmpty()) {
-            return null;
-        }
-
-        return account.get();
-    }
-
     public Account save(Account account) {
         account = accountRepository.save(account);
         return account;
