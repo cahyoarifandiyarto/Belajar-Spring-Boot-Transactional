@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: belajar-spring-boot-transaction
+  datasource:
+    url: jdbc:h2:mem:belajar_spring_boot_transaction
+    username: belajar_spring_boot_transaction
+    password: belajar_spring_boot_transaction
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /docs.html
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
+        transaction: DEBUG
+      hibernate:
+        engine:
+          transaction:
+            internal:
+              TransactionImpl: DEBUG
